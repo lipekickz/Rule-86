@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bad Apple</title>
 
 <style>
 html, body{
@@ -10,7 +11,7 @@ html, body{
     width:100%;
     height:100%;
     overflow:hidden;
-    background:#000;
+    background:black;
 }
 
 video{
@@ -21,7 +22,6 @@ video{
     object-fit:cover;
 }
 </style>
-
 </head>
 <body>
 
@@ -30,11 +30,12 @@ video{
 </video>
 
 <script>
-const video = document.getElementById("video");
-
 // Tenta reproduzir automaticamente
-video.play().catch(() => {});
+document.getElementById("video").play().catch(() => {});
+</script>
 
+</body>
+</html>
 // Mantém em loop
 video.onended = () => {
     video.currentTime = 0;
